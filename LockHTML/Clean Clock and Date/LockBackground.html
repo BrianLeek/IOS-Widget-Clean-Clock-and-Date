@@ -1,80 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Clean Clock & Date By Brian</title>
-<style type="text/css">
-@font-face {
-    font-family: HelveticaNeue-UltraLigCond;
-    src: url('fonts/HelveticaNeue-UltraLigCond.otf');
-}
-
-body {text-transform: uppercase;font-family: HelveticaNeue-UltraLigCond;}
-.container {width: 999px; margin: 0 auto; overflow: hidden;float: left;}
-#date {text-indent: 1em;letter-spacing: 5.2px;font-weight: 500;}
-.clock {color:#fff;float: left;}
-.clock1 {text-indent: 0.1em; padding-bottom: 1px;font-size: 5.7em;}
-ul { width: 100%; margin:0 auto; padding:0px; list-style:none;}
-ul li { display:inline;}
-.line {padding-bottom: 148px;border-bottom: 1px solid white;}
-</style>
-
-<script type="text/javascript" src="scripts/jquery-1.6.4.min.js"></script>
-<script type="text/javascript">
-
-$(document).ready(function() {
-
-var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
-var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-
-var newDate = new Date();
-newDate.setDate(newDate.getDate());
-   
-$('#date').html('<b>' + dayNames[newDate.getDay()] + " " + monthNames[newDate.getMonth()] + ' ' + newDate.getDate() + '</b>');
-
-window.onload = function() {
-  clock();  
-    function clock() {
-    var now = new Date();
-    var TwentyFourHour = now.getHours();
-    var hour = now.getHours();
-    var min = now.getMinutes();
-    var seconds = new Date().getSeconds();
-    var mid = 'pm';
-    if (min < 10) {
-      min = "0" + min;
-    }
-    if (hour > 12) {
-      hour = hour - 12;
-    }    
-    if(hour==0){ 
-      hour=12;
-    }
-    if(TwentyFourHour < 12) {
-       mid = 'am';
-    }     
-  document.getElementById('time').innerHTML = '<div class="clock1">'+hour+':'+min+'</div>';
-    setTimeout(clock, 1000);
-    }
-}
-	
-}); 
-</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Clean Clock & Date By Brian (@Precutting)</title>
+    <script type="text/javascript" src="scripts/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
 </head>
+
 <body>
 
-<div class="container">
-<div id="iphonescreen">
-<br />
-<div class="clock">
-<ul>
-	<li id="time"></li>
-</ul>
-<div id="date"></div>
-<br />
-</div>
-<div class="line"></div>
-</div>
-</div>
+    <div class="container">
+        <div class="clock">
+            <ul>
+                <li id="time"></li>
+            </ul>
+            <div id="date"></div>
+        </div>
+        <div class="line"></div> <!-- Remove this line to remove the line under the date. -->
+    </div>
+
 </body>
 </html>

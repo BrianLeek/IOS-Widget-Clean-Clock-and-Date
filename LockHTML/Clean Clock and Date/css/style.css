@@ -1,0 +1,9 @@
+@font-face{font-family:HelveticaNeue-UltraLigCond;src:url(../fonts/HelveticaNeue-UltraLigCond.otf);}
+body{font-family:HelveticaNeue-UltraLigCond;text-transform:uppercase;}
+.container{width:999px;margin:0 auto;overflow:hidden;float:left;}
+#date{text-indent:1em;letter-spacing:5.2px;font-weight:500;}
+.clock{color:#fff;float:left;}
+.clock1{text-indent:.1em;padding-bottom:1px;font-size:5.7em;}
+ul{width:100%;margin:0 auto;padding:0;list-style:none;}
+ul li{display:inline;}
+.line{padding-bottom:148px;border-bottom:1px solid #fff;}
